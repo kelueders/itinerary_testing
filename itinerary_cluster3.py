@@ -11,6 +11,7 @@ from collections import defaultdict
 
 from trip_391 import trip_391
 from trip_385 import trip_385
+from trip_399 import trip_399
 
 # function to convert the trip object into the format required to turn into a dataframe
 def extract_id_lat_long(trip):
@@ -42,9 +43,9 @@ def extract_trip_duration(trip):
     return duration
 
 
-data = extract_id_lat_long(trip_385)
+data = extract_id_lat_long(trip_399)
 df = pd.DataFrame(data)
-n_days = extract_trip_duration(trip_385)
+n_days = extract_trip_duration(trip_399)
 
 # Convert lat/long to radians for haversine calculation
 df['lat_rad'] = np.radians(df['lat'])
